@@ -16,6 +16,8 @@ jobs:
           path: "."
           format: "HTML"
           out: "dependency-check-report"
+          args: >
+            --nvdApiKey ${{ secrets.NVD_API_KEY }}
         # NVD now rate-limits anonymous requests heavily. Request a free key at
         # https://nvd.nist.gov/developers/request-an-api-key and store it as
         # a repository secret named NVD_API_KEY.
